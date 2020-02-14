@@ -12,7 +12,7 @@ import javax.validation.constraints.NotNull;
  * @author Oikawa Yumi
  */
 public class UserOrderForm {
-    @NotBlank
+    @NotBlank(message = 氏名を入力してください)
     private String customerName;
 
     @NotBlank
