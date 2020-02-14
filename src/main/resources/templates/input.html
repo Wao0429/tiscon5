@@ -23,17 +23,17 @@
         <legend>個人情報</legend>
         <div class="form-group">
           <label for="customerName">氏名</label>
-          <input type="text" placeholder="名前を入力してください" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
+          <input type="text" placeholder="例　工藤雅弘" id="customerName" name="customerName" th:field="*{customerName}" class="form-control" value="山田太郎"/>
         </div>
 
 
         <div class="form-group">
           <label for="tel">連絡先TEL(半角、ハイフン無し)</label>
-          <input type="tel" placeholder="電話番号を入力してください" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
+          <input type="tel" placeholder="例　09012345678" id="tel" name="tel" th:field="*{tel}" class="form-control" value="03-1234-5678"/>
         </div>
         <div class="form-group">
           <label for="email">連絡先メールアドレス(半角)</label>
-          <input type="email" id="email" 　placeholder="メールアドレスを入力してください" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
+          <input type="text" id="email" 　placeholder="例 aaa@gmail.com" name="email" th:field="*{email}" class="form-control" value="test@test.com"/>
         </div>
         <div class="form-group">
           <label for="oldPrefectureId">転居元住所（都道府県）</label>
