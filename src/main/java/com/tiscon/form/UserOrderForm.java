@@ -15,40 +15,40 @@ public class UserOrderForm {
     @NotBlank(message = "氏名を入力してください")
     private String customerName;
 
-    @NotBlank
-    @Numeric
+    @NotBlank (message = "連絡先TELを入力してください")
+    @Numeric (message = "連絡先TELを半角英数字で入力してください")
     private String tel;
 
     @Email (message = "メールアドレスを正しく入力してください")
     @NotBlank (message = "メールアドレスを入力してください")
     private String email;
 
-    @NotBlank
+    @NotBlank (message = "転居元住所(都道府県)を入力してください")
     private String oldPrefectureId;
 
-    @NotBlank
+    @NotBlank (message = "転居元住所(市区町村以下)を入力してください")
     private String oldAddress;
 
-    @NotBlank
+    @NotBlank (message = "転居先住所(都道府県)を入力してください")
     private String newPrefectureId;
 
-    @NotBlank
+    @NotBlank (message = "転居先住所(市区町村以下)を入力してください")
     private String newAddress;
 
-    @Numeric
-    @NotBlank
+    @Numeric (message = "段ボールの数を半角で入力してください")
+    @NotBlank (message = "段ボールの数を入力してください")
     private String box;
 
-    @Numeric
-    @NotBlank
+    @Numeric (message = "ベッドの数を半角で入力してください")
+    @NotBlank (message = "ベッドの数を入力してください")
     private String bed;
 
-    @Numeric
-    @NotBlank
+    @Numeric (message = "自転車の数を半角で入力してください")
+    @NotBlank (message = "自転車の数を入力してください")
     private String bicycle;
 
-    @Numeric
-    @NotBlank
+    @Numeric (message = "洗濯機の数を半角で入力してください")
+    @NotBlank (message = "洗濯機の数を入力してください")
     private String washingMachine;
 
     @NotNull
