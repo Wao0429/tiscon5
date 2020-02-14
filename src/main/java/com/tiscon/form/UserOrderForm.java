@@ -19,8 +19,8 @@ public class UserOrderForm {
     @Numeric
     private String tel;
 
-    @Email
-    @NotBlank
+    @Email (message = "メールアドレスを正しく入力してください")
+    @NotBlank (message = "メールアドレスを入力してください")
     private String email;
 
     @NotBlank
