@@ -8,12 +8,35 @@
   <link rel="stylesheet" th:href="@{http://fonts.googleapis.com/css?family=Exo:900}"
         href="http://fonts.googleapis.com/css?family=Exo:900"/>
   <link rel="stylesheet" th:href="@{/css/main.css}" href="../static/css/main.css">
+
+
+  <!-- 詳細見積依頼の二段階確認関数 -->
+  <script type="text/javascript">
+  <!--
+      function ConfirmToComplete(){
+        if(aaa.key.value === 'bbb') {
+          // 詳細見積ボタンを押したときの処理
+          if(confirm("依頼してよろしいですか")){
+            return true;
+          }
+          else{
+            return false;
+          }
+        }
+
+        return true;
+
+
+      }
+   // -->
+  </script>
+
 </head>
 
 <body>
 <nav th:insert="header.html :: header"></nav>
 <div class="container">
-  <form th:action="@{/order}" th:object="${userOrderForm}" class="form-horizontal" method="post">
+  <form name="aaa" th:action="@{/order}" th:object="${userOrderForm}" class="form-horizontal" method="post" onsubmit="return ConfirmToComplete()">
     <h1>個人情報と概算見積りの確認</h1>
     <div class="col-sm-12">
       <h2>概算お見積り結果は<span th:text="${price}"></span>円です。</h2>
@@ -98,7 +121,8 @@
       <div class="form-group">
         <div class="text-center">
           <button type="submit" name="backToInputFromResult" class="btn btn-primary">戻る</button>
-          <button type="submit" name="complete" class="btn btn-primary">詳細見積もり依頼</button>
+          <button type="submit" name="complete" class="btn btn-primary" onclick="aaa.key.value='bbb'">詳細見積もり依頼</button>
+          <input type="hidden" name="key" value="" />
         </div>
       </div>
     </div>
