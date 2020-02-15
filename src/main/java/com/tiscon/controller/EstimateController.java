@@ -62,7 +62,7 @@ public class EstimateController {
      * @param model 遷移先に連携するデータ
      * @return 遷移先
      */
-    @PostMapping(value = "submit", params = "backToTop")
+    @PostMapping(value = "result", params = "backToTop")
     String backToTop(Model model) {
         return "top";
     }
